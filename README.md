@@ -13,5 +13,21 @@ The competition scoring criteria focus on measuring image segmentation accuracy 
 
 
 
+## 1. Complete the todo comments in the code
+
+**segmentation.py**  Load network for image segmentation
+
+**process.py**    Image processing process
+
+
+
+## 2. Run build.sh
+
+
+
+## 3. Run export.sh
+
+
+
 
 

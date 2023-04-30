@@ -19,7 +19,7 @@ class Nodule_seg:
     def __init__(self):
         self.input_dir = Path("/input/images/pelvic-2d-ultrasound/") if execute_in_docker else Path("./test/")
         self.output_dir = Path("/output/images/symphysis-segmentation/") if execute_in_docker else Path("./output/")
-        # Load the trained model
+        # todo Load the trained model
         if execute_in_docker:
             path_model = "/opt/algorithm/model_weights/best_model.pth"
         else:
@@ -39,7 +39,6 @@ class Nodule_seg:
         with torch.no_grad():
             # Put it into the network for processing
             pred = self.md.process_image(image_data)
-
             # Post processing and saving of predicted images
             pred = pred.squeeze(0)
             pred = pred.cpu().numpy()
